@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset=utf-8 />
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>Calculator</title>
+ </head>
+ <body>
+ <label>Square this number:
+ <input type="number" id="square-input" size="2">
+ <script>
+ function squareNumber(num) {
+ let squareNumber = num * num;
+ console.log('The result of squaring the number ' + num + ' is ' + squareNumber);
+ return squareNumber;
+ }
+ let squaredButton = document.querySelector("#square-button");
+ squareButton.addEventListener("click", function () {
+ let num = document.querySelector("#square-input").value;
+ document.querySelector("#solution").innerHTML = squareNumber(num);
+});
+ </script>
+ </label>
+ <button id="square-button">Calculate</button>
+ <br><br> 
+ <label>Half this number:
+ <input type="number" id="half-input" size="2">
+ </label>
+ <button id="half-button">Calculate</button>
+ <br><br> 
+ <label>
+ Fraction:
+ <input type="number" id="percent1-input" size="2">
+ </label>
+ <label>
+ Whole:
+ <input type="number" id="percent2-input" size="2">
+11
+ </label>
+ <button id="percent-button">Calculate</button>
+ <br><br> 
+ <label>Calculate area of circle with radius:
+ <input type="number" id="area-input" size="2">
+ </label>
+ <button id="area-button">Calculate</button> 
+ <br><br>
+ <div id="solution"></div> 
+ </body>
+ </html>

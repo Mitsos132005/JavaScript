@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .image {
+        width: 300px;
+        height: 300px;
+      }
+      .options {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+        margin-top: 10px;
+      }
+      .option {
+        width: 120px;
+        height: 50px;
+        border: 1px solid black;
+        text-align: center;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text">Select the Correct Album Name To Earn Points</div>
+    <div class="image-container">
+      <img class="image" id="image" src="pic1.jpg" />
+    </div>
+    <div class="options">
+      <div class="option" id="option1">Bathed In Blood</div>
+      <div class="option" id="option2">Buchered</div>
+      <div class="option" id="option3">Butchered At Birth</div>
+      <div class="option" id="option4">Evil Buchering</div>
+    </div>
+    <script>
+      var images = [
+        "pic1.jpg",
+        "pic2.jpg",
+        "pic3.jpg",
+        "pic4.jpg",
+        "pic5.jpg",
+        "pic6.jpg",
+        "pic7.jpg",
+        "pic8.jpg",
+        "pic9.jpg",
+        "pic10.jpg",
+      ];
+      var options = [
+        [
+          "Bathed In Blood",
+          "Buchered",
+          "Butchered At Birth",
+          "Evil Buchering"
+        ],
+        [
+          "Holy Diver",
+          "Drowning",
+          "Sea Of Satan",
+          "Unholy Dive"
+        ],
+        [
+          "Electric Chair",
+          "Electrfied",
+          "Lighting Strikes",
+          "Ride The Lightning"
+        ],
+        [
+          "Satan's Puppet",
+          "The Number Of The Beast",
+          "666",
+          "Controled By Evil"
+        ],
+        [
+          "Stoned",
+          "Hallucinations",
+          "Paranoid",
+          "Insane"
+        ],
+        [
+          "Cryptonite",
+          "Area 18",
+          "Rust In Peace",
+          "Nuclear Warheads"
+        ],
+        [
+          "Spiritual Healing",
+          "The Healing Hand",
+          "Evil Televangelists",
+          "The Healing Psalms"
+        ],
+        [
+          "Razor",
+          "The Sharpest Edge",
+          "British Steel",
+          "Killing Time"
+        ],
+        [
+          "Vulgar Display Of Power",
+          "The Hand Of Power",
+          "Those Once Powerful",
+          "The Punch Of Power"
+        ],
+        [
+          "Desert Cowboys",
+          "Ace Of Spades",
+          "Cowboys From Hell",
+          "Ace"
+        ]
+      ];
+      var correctOptionIndex = [2, 0, 3, 1, 2, 2, 0, 2, 0, 1];
+      var currentImageIndex = 0;
+      var score = 0;
+      function updateImageAndOptions() {
+        document.getElementById("image").src = images[currentImageIndex];
+        var currentOptions = options[currentImageIndex];
+        document.getElementById("option1").innerHTML = currentOptions[0];
+        document.getElementById("option2").innerHTML = currentOptions[1];
+        document.getElementById("option3").innerHTML = currentOptions[2];
+        document.getElementById("option4").innerHTML = currentOptions[3];
+      }
+      document.getElementById("option1").addEventListener("click", function() {
+      if (correctOptionIndex[currentImageIndex] === 0) {
+        score++;
+      }
+      currentImageIndex++;
+      if (currentImageIndex >= images.length) {
+        alert("Your score is: " + score + " out of " + images.length + " images.");
+      } else {
+        updateImageAndOptions();
+      }
+    });
+    document.getElementById("option2").addEventListener("click", function() {
+      if (correctOptionIndex[currentImageIndex] === 1) {
+        score++;
+      }
+      currentImageIndex++;
+      if (currentImageIndex >= images.length) {
+        alert("Your score is: " + score + " out of " + images.length + " images.");
+      } else {
+        updateImageAndOptions();
+      }
+    });
+    document.getElementById("option3").addEventListener("click", function() {
+      if (correctOptionIndex[currentImageIndex] === 2) {
+        score++;
+      }
+      currentImageIndex++;
+      if (currentImageIndex >= images.length) {
+        alert("Your score is: " + score + " out of " + images.length + " images.");
+      } else {
+        updateImageAndOptions();
+      }
+    });
+    document.getElementById("option4").addEventListener("click", function() {
+      if (correctOptionIndex[currentImageIndex] === 3) {
+        score++;
+      }
+      currentImageIndex++;
+      if (currentImageIndex >= images.length) {
+        alert("Your score is: " + score + " out of " + images.length + " images.");
+      } else {
+        updateImageAndOptions();
+      }
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "Sat15",
+			"path": "..\\Arduino\\Sat15"
+		}
+	],
+	"settings": {}
+}

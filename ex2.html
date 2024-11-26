@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset="utf-8">
+ <title>Example using querySelector and querySelectorAll</title> 
+ </head>
+ <body>
+<div id="main">
+<div class="pictureContainer">
+<img class="theimage" src="https://static.dw.com/image/61513813_303.jpg" 
+height="150" width="150"/>
+</div>
+<div class="pictureContainer">
+<img class="theimage" src="https://see.news/wpcontent/uploads/2020/12/UK_wildbirds-01-robin.jpg" height="150" width="150"/>
+</div>
+<div class="pictureContainer">
+<img class="theimage" 
+src="https://images.theconversation.com/files/456350/original/file-20220405-6157-
+c2dbrq.jpeg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop" height="150" 
+width="150"/>
+</div>
+<div class="pictureContainer">
+<img class="theimage" src="https://res.cloudinary.com/dk-findout/image/upload/q_80,w_960,f_auto/DCTM_Penguin_UK_DK_AL526630_wkmzns.jpg" height="150" 
+width="150"/>
+8
+</div>
+</div> 
+ <script> 
+	const a = document.querySelectorAll(".pictureContainer");
+for (let i = 0; i < a.length; i++) {
+ a[i].style.backgroundColor = "blue";
+}
+ </script>
+ </body>
+</html>
